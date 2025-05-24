@@ -16,3 +16,24 @@ const userSchema = new mongoose.Schema({
 });
 
 const user = mongoose.model("user", userSchema);
+
+// const user1 = new user({
+//   name: "Cheery",
+//   email: "Cheery@yahoo.in",
+//   age: 50,
+// });
+
+// user1.save().then();
+
+const user2 = new user({
+  name: "eve",
+  email: "eve@yahoo.in",
+  age: 48,
+});
+
+user2.save().then( (res) => {
+  console.log(res)
+})
+.catch( (err) => {
+  console.log(err);
+});
